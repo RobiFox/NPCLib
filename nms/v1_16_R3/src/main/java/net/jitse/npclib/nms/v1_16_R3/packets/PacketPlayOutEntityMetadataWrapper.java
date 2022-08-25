@@ -17,7 +17,8 @@ public class PacketPlayOutEntityMetadataWrapper {
         
         dataWatcher.register(new DataWatcherObject<EntityPose>(6, DataWatcherRegistry.s), getMaskedPose(activateStates));
         dataWatcher.register(new DataWatcherObject<>(0, DataWatcherRegistry.a), masked);
-        
+        dataWatcher.register(new DataWatcherObject<>(16, DataWatcherRegistry.a), (byte) 127);
+
         return new PacketPlayOutEntityMetadata(entityId, dataWatcher, true);
     }
     
